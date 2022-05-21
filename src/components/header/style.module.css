@@ -1,0 +1,17 @@
+.containerHeader{
+    width: 100%;
+    height: auto;
+    background-color: #ebd1a3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 4px solid #683c11;
+    max-height: 150px;
+}
+
+.logo{
+    width: 20%;
+    height: auto;
+    max-height: 150px;
+    max-width: 150px;
+}
