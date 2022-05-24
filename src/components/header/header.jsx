@@ -1,10 +1,12 @@
-import Logo from '../../img/logo.png'
-import styles from './style.module.css'
+import Logo from '../../img/logo.png';
+import styles from './style.module.css';
 
-function Header (){
+function Header (props){
+
+
     return (
         <section  className={styles.containerHeader}>
-            <img src={Logo} alt="logo" className={styles.logo}></img>
+            <img src={Logo} alt="logo" className={styles.logo} ></img> 
         </section>
     )
 }

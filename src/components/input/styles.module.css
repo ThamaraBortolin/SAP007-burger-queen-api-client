@@ -11,3 +11,11 @@
 .input::placeholder{
     color: #683c11;
 }
+
+
+  @media (max-device-width:675px) {
+    .input{
+        height: 20px;
+        width: 90%;
+    }
+  }
