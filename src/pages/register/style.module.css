@@ -1,11 +1,11 @@
-
-.containerLogin{
+.containerRegister{
     width: 60%;
     height: 70vh;
     display: flex;
     justify-content: center;
     position: relative;
     margin: auto;
+    padding: 2%;
 }
 
 .imgPaper{
@@ -16,12 +16,12 @@
     max-width: 650px;
 }
 
-.formLogin{
+.formRegister{
     position: absolute;
     align-self: center;
     justify-self: center;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     width: 100%;
     max-width: 400px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -30,16 +30,30 @@
 
 .label{
     font-size: 1.5rem;
+    width: 100%;
 }
 
-.pNotRegister, .linkRegister{
+.haveLogin, .linkLogin{
     align-self: center;
     color: #683c11;
+    width: 100%;
+    text-align: center;
+}
+
+.labelCheckbox{
+    width: 50%;
+    text-align: center;
+}
+
+.msgErro{
+    width: 100%;
+    text-align: center;
+    color: red;
 }
 
 @media (max-device-width:675px) {
 
-    .containerLogin{
+    .containerRegister{
         width: 80%;
     }
 
@@ -48,5 +62,13 @@
         align-self: center;
         width: 95vw;
         height: 65vh;
+    }
+}
+
+@media (max-device-width:376px){
+    
+    .label{
+        font-size: 1rem;
+        width: 100%;
     }
 }
