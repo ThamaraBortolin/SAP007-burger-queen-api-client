@@ -1,46 +1,24 @@
+import {Link} from 'react-router-dom';
+
 import Header from '../../components/header/header.jsx';
 import Footer from '../../components/footer/footer.jsx';
-import Paper from '../../img/paper.png';
-import style from './style.module.css';
 import Input from '../../components/input/input.jsx';
 import Button from '../../components/button/button.jsx';
-import {Link} from 'react-router-dom';
-import { useState } from 'react';
 
-const initialValue = {
-        name: '',
-        email:'',
-        password:'',
-        checkPassword:'',
-        role:'',
-    }
+import Paper from '../../img/paper.png';
+
+import style from './style.module.css';
+
+import RegisterValid from './registerValid.jsx';
+
+
+
+
 
 function Register (){
     
-    const [values, setValues] = useState({initialValue});
-
-    const [msgErro, setMsgErro] = useState('');
-
-    function onChange(e){
-        const {name, value} = e.target;
-        
-        setValues({...values,[name]: value})
-
-    }
-
-    function onSubmit(e){
-        e.preventDefault()
-        
-
-        setMsgErro('')
-        
-        if(values.password !== values.checkPassword){
-            setMsgErro('As senhas não coincidem')
-        }else if(!/\S+@\S+\.\S+/.test(values.email)){
-            setMsgErro('Email inválido')
-        }
-    }
-
+    const {onChange, onSubmit, msgErro} = RegisterValid();
+    
     return (
         <>
             <Header />
