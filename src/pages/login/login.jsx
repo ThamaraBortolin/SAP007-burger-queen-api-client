@@ -1,30 +1,20 @@
 import Header from '../../components/header/header.jsx';
 import Footer from '../../components/footer/footer.jsx'
-import Paper from '../../img/paper.png';
 import Input from '../../components/input/input.jsx';
 import Button from '../../components/button/button.jsx';
-import style from './style.module.css'
-import {Link} from 'react-router-dom';
-import { useState } from 'react';
+import LoginValid from './loginValid.jsx';
 
-const initialValue = {
-        email:'',
-        password:'',
-    }
+import Paper from '../../img/paper.png';
+
+import style from './style.module.css'
+
+import {Link} from 'react-router-dom';
+
+
+
 function Login (){
     
-    const [values, setValues] = useState({initialValue});
-
-
-    function onChange(e){
-        const {name, value} = e.target;
-
-        setValues({...values, [name]: value});
-    }
-
-    function onSubmit(e){
-        e.preventDefault();
-    }
+    const {onChange, onSubmit} = LoginValid()
 
     return (
         <>
