@@ -37,6 +37,12 @@
     color: #683c11;
 }
 
+.msgErro{
+    width: 100%;
+    text-align: center;
+    color: red;
+}
+
 @media (max-device-width:675px) {
 
     .containerLogin{

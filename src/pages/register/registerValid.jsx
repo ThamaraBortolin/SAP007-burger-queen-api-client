@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import {createUser} from '../../service/api.jsx';
+import {createUser} from '../../service/apiUser.jsx';
 
 
 const RegisterValid = () => {
@@ -56,7 +56,11 @@ const RegisterValid = () => {
                         .then((data) => {
                             console.log(data)
                             if(data.role === "hall"){
+                                localStorage.setItem('token',data.token)
                                 navigate('/hall');
+                            }if(data.role === 'kitchen'){
+                                localStorage.setItem('token',data.token)
+                                navigate('/kitchen');
                             }
                         })
                     }

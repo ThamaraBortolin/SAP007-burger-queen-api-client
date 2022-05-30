@@ -1,0 +1,45 @@
+.mainHall{
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+}
+
+.menu{
+    width: 70%;
+    height: 100%;
+}
+
+.btnMenus{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 10px;
+}
+
+.newOrder{
+    width: 30%;
+    height: 70%;
+    background-color: #ebd1a3;
+    margin: 10px;
+    padding: 2%;
+    color: #683c11;
+    display:inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 2px solid #683c11 ;
+    border-radius: 10px;
+}
+
+.orderList{
+    width: 100%;
+    height: 70%;
+}
+
+.btnNewOrder{
+    align-self: flex-end;
+    justify-self: end;
+}

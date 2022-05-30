@@ -1,11 +1,15 @@
 .btn{
     width: auto;
     height: 40px;
-    margin: 2% auto;
+    
     background-color: #683c11;
     border-radius: 10px;
     color: #ebd1a3;
     font-size: 100%;
     border: none;
     padding: 0% 1%;
+}
+
+.btn[type = submit]{
+    margin: 2% auto;
 }
