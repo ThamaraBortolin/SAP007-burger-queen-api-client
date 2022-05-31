@@ -14,7 +14,7 @@ import {Link} from 'react-router-dom';
 
 function Login (){
     
-    const {onChange, onSubmit} = LoginValid()
+    const {onChange, onSubmit, msgErro} = LoginValid()
 
     return (
         <>
@@ -28,7 +28,7 @@ function Login (){
                             <label className={style.label}>Senha:
                                 <Input id="password" name="password" type="password" placeholder="Insira sua senha" onChange={onChange} required/>
                             </label>
-                            {/* <p>{msgErro}</p> */}
+                            <p className={style.msgErro}>{msgErro}</p>
                             <Button type="submit" textBtn="Login"/>
                             <p className={style.pNotRegister}>Não é cadastrado?</p>
                             <Link  className={style.linkRegister} to="/register">Cadastre-se</Link>

@@ -11,10 +11,6 @@ import style from './style.module.css';
 
 import RegisterValid from './registerValid.jsx';
 
-
-
-
-
 function Register (){
     
     const {onChange, onSubmit, msgErro} = RegisterValid();
