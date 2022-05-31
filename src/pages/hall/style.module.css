@@ -43,3 +43,8 @@
     align-self: flex-end;
     justify-self: end;
 }
+
+.imgMenu{
+    width: 10%;
+    height: auto;
+}

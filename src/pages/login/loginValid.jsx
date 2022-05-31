@@ -40,13 +40,9 @@ const LoginValid = () => {
             })
             .then((data) =>{
                 console.log(data)
-                if(data.role === 'hall'){
-                    localStorage.setItem('token',data.token)
-                    navigate('/hall')
-                }if(data.role === 'kitchen'){
-                    localStorage.setItem('token',data.token)
-                    navigate('/kitchen')
-                }
+                localStorage.setItem('token',data.token)
+                localStorage.setItem('role', data.role)
+                    navigate('/main')
             })
     }
 
