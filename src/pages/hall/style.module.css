@@ -13,25 +13,34 @@
     width: 100%;
     height: auto;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     gap: 10px;
-    margin: 10px;
+    margin: 5% 0;
+}
+
+.aside{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .newOrder{
-    width: 30%;
-    height: 70%;
+    width: 80%;
+    height: 60%;
     background-color: #ebd1a3;
     margin: 10px;
     padding: 2%;
     color: #683c11;
-    display:inline-flex;
+    display:flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
     border: 2px solid #683c11 ;
     border-radius: 10px;
+    max-height: 60vh;
 }
 
 .orderList{
@@ -44,7 +53,84 @@
     justify-self: end;
 }
 
+.containerMenu{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5%;
+    margin-bottom: 15%;
+}
+
+.sectionFilters{
+    width: 100%;
+    display: flex;
+    gap: 2%;
+}
+
+.selectFilter{
+    background-color: #ebd1a3;
+    color: #683c11;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border: 1px solid #683c11;
+}
+
+.containerProducts{
+    width: 200px;
+    height: 250px;
+    background-color: #ebd1a3;
+    border-radius: 5px;
+    border: solid 2px #683c11;
+    padding: 2%;
+    margin-bottom: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-evenly;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #683c11;
+}
+
+.nameProduct{
+    width: 70%;
+    font-size: 1.5rem;
+}
+
 .imgMenu{
-    width: 10%;
+    width: 90%;
     height: auto;
+    margin: 2% 5%;
+    border-radius: 5px;
+}
+
+.sectionFlavor{
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 2% 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #683c11;
+    background-color: #ebd1a3;
+    align-self: center;
+    border-radius: 10px;
+    box-shadow: 0 0 0.5em #683c11;
+    max-width: 550px;
+}
+
+.spanFlavor{
+    width: 30%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.complement{
+    margin-top: 1%;
+    width: 100%;
 }
