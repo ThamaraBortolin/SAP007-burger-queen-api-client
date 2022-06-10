@@ -5,7 +5,8 @@ function Button(props) {
         <button
             type={props.type}
             className={style.btn}
-            onClick={props.onClick}>
+            onClick={props.onClick}
+            value={props.value}>
             {props.textBtn}
         </button>
     )

@@ -1,0 +1,66 @@
+.containerProducts{
+    width: 200px;
+    min-height: 250px;
+    height: auto;
+    background-color: #ebd1a3;
+    border-radius: 5px;
+    border: solid 2px #683c11;
+    padding: 2%;
+    margin-bottom: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-evenly;
+    align-self: center;
+    gap: 1%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #683c11;
+}
+
+.nameProduct{
+    width: 70%;
+    font-size: 1.5rem;
+}
+
+.imgMenu{
+    width: 90%;
+    height: auto;
+    margin: 2% 5%;
+    border-radius: 5px;
+}
+
+.complement{
+    margin-top: 1%;
+    width: 50%;
+    color: red;
+    display: flex;
+    align-items: center;
+    gap: 1%;
+}
+
+.price{
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+    font-weight: bolder;
+}
+
+.counter{
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid #683c11;
+    margin: 0 25%;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.spanFlavor{
+    width: 30%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
