@@ -8,32 +8,59 @@ import Paper from '../../img/paper.png';
 
 import style from './style.module.css'
 
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 
-function Login (){
-    
-    const {onChange, onSubmit, msgErro} = LoginValid()
+function Login() {
+
+    const { onChange, onSubmit, msgErro } = LoginValid()
 
     return (
         <>
             <Header />
-                <section className={style.containerLogin}>
-                    <img src={Paper} alt="paper" className={style.imgPaper}></img>
-                        <form className={style.formLogin} onSubmit={onSubmit}>
-                            <label className={style.label}>Email:
-                                <Input id="email" name="email" type="text" placeholder="Insira seu email" onChange={onChange} required/>
-                            </label>
-                            <label className={style.label}>Senha:
-                                <Input id="password" name="password" type="password" placeholder="Insira sua senha" onChange={onChange} required/>
-                            </label>
-                            <p className={style.msgErro}>{msgErro}</p>
-                            <Button type="submit" textBtn="Login"/>
-                            <p className={style.pNotRegister}>Não é cadastrado?</p>
-                            <Link  className={style.linkRegister} to="/register">Cadastre-se</Link>
-                        </form>
-                </section>
+            <section className={style.containerLogin}>
+                <img
+                    src={Paper}
+                    alt="paper"
+                    className={style.imgPaper} />
+                <form
+                    className={style.formLogin}
+                    onSubmit={onSubmit}>
+                    <label className={style.label}>
+                        Email:
+                        <Input
+                            id="email"
+                            name="email"
+                            type="text"
+                            placeholder="Insira seu email"
+                            onChange={onChange}
+                            required />
+                    </label>
+                    <label className={style.label}>
+                        Senha:
+                        <Input
+                            id="password"
+                            name="password"
+                            type="password"
+                            placeholder="Insira sua senha"
+                            onChange={onChange}
+                            required />
+                    </label>
+                    <p className={style.msgErro}>
+                        {msgErro}
+                    </p>
+                    <Button
+                        type="submit"
+                        textBtn="Login" />
+                    <p className={style.pNotRegister}>
+                        Não é cadastrado?
+                    </p>
+                    <Link className={style.linkRegister}
+                        to="/register">
+                        Cadastre-se</Link>
+                </form>
+            </section>
             <Footer />
         </>
     )

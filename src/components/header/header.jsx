@@ -6,7 +6,10 @@ function Header (props){
 
     return (
         <section  className={styles.containerHeader}>
-            <img src={Logo} alt="logo" className={styles.logo} ></img> 
+            <img 
+            src={Logo} 
+            alt="logo" 
+            className={styles.logo}/>
         </section>
     )
 }

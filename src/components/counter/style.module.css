@@ -1,0 +1,22 @@
+.btnCounterMinus, .btnCounterPlus{
+    width: 33%;
+    height: 100%;
+    background-color: transparent;
+    color: #683c11;
+    border: none;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.btnCounterMinus{
+    border-right: 1px solid #683c11;
+}
+
+.btnCounterPlus{
+    border-left: 1px solid #683c11;
+}
+
+.qtd{
+    width: 33%;
+    font-size: 1.2rem;
+}
