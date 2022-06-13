@@ -7,8 +7,7 @@ import Counter from '../counter/counter';
 
 import style from './style.module.css';
 
-function MenuProducts({ itens }) {
-
+function MenuProducts({ itens, increment }) {
     return (
         <>
             {itens.map((element) =>
@@ -34,7 +33,9 @@ function MenuProducts({ itens }) {
                     R${element.price}
                 </p>
                 <div className={style.counter}>
-                    <Counter/>
+                    <Counter 
+                    increment={() => increment(element)} 
+                    counter={element.qtd}/>
                 </div>
             </li>))}
         </>

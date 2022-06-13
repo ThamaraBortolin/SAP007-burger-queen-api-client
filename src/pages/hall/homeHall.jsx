@@ -8,6 +8,7 @@ import NewOrder from '../../img/newOrder.png'
 import MenuFlavor from '../../components/menuProducts/menuFlavor.jsx';
 import ModalNewOrder from '../../components/modal/newOrder.jsx';
 
+
 import { useEffect, useState } from 'react';
 
 
@@ -17,7 +18,10 @@ const HomeHall = () => {
 
     const [menu, setMenu] = useState([])
     const [type, setType] = useState([])
+    const [order, setOrder] = useState([])
     const [isModalVisible, setIsModalVisible] = useState(false)
+    const [qtd, setQtd] = useState(1)
+    
 
     useEffect(() => {
         getProducts()
@@ -26,7 +30,28 @@ const HomeHall = () => {
             .catch(error => alert('Error: ' + error.message));
     }, []);
 
-    console.log(menu)
+    
+    const increment = (iten) => {
+        const exist = order.find((e) => e.id === iten.id)
+        const newOrder = {
+            id:iten.id,
+            name: iten.name,
+            price:iten.price,
+            flavor:iten.flavor,
+            complement:iten.complement,
+            quantity: 0,
+        }
+        if(!exist){
+            newOrder.quantity += 1
+            setOrder([...order,newOrder])
+            console.log(order)
+            
+        }else{
+            newOrder.quantity ++
+            console.log(order)
+        }
+    }
+
 
     return (
         <>
@@ -61,7 +86,8 @@ const HomeHall = () => {
                     </section>
                     <ul className={style.containerMenu}>
                         <MenuProducts
-                            itens={menu.filter((item) => item.sub_type === type)} />
+                            itens={menu.filter((item) => item.sub_type === type)}
+                            increment={increment}/>
                     </ul>
                 </section>
                 <img className={style.newOrderBtn} alt="newOrder"
@@ -70,7 +96,8 @@ const HomeHall = () => {
                 {isModalVisible &&
                     <ModalNewOrder
                         className={style.modal}
-                        onClick={() => { setIsModalVisible(false) }} />}
+                        onClick={() => { setIsModalVisible(false) }} 
+                        itens={order}/>}
             </main>
             <Footer />
         </>
