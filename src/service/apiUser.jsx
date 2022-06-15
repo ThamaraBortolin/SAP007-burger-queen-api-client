@@ -29,4 +29,6 @@ export const loginUser = (values) =>{
     })
 }
 
+export const logOut = () => localStorage.removeItem('token')
+
 export const getToken = () => localStorage.getItem('token')
