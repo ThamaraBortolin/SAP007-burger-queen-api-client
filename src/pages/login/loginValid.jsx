@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import {useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { loginUser } from '../../service/apiUser.jsx'
 
 
@@ -9,11 +9,11 @@ const LoginValid = () => {
         email: '',
         password: '',
     }
-    
+
     const [values, setValues] = useState({ initialValue });
-    
+
     const [msgErro, setMsgErro] = useState('');
-    
+
     const navigate = useNavigate();
 
     const onChange = (e) => {
@@ -38,11 +38,11 @@ const LoginValid = () => {
                         setMsgErro('Ops! Tente novamente mais tarde.')
                 }
             })
-            .then((data) =>{
+            .then((data) => {
                 console.log(data)
-                localStorage.setItem('token',data.token)
+                localStorage.setItem('token', data.token)
                 localStorage.setItem('role', data.role)
-                    navigate('/main')
+                navigate('/main')
             })
     }
 

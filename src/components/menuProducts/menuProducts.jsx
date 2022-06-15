@@ -1,13 +1,13 @@
 import { GiMeat } from 'react-icons/gi';
 import { GiChickenLeg } from 'react-icons/gi';
 import { RiPlantFill } from 'react-icons/ri';
-import {FcPlus} from 'react-icons/fc';
+import { FcPlus } from 'react-icons/fc';
 
 import Counter from '../counter/counter';
 
 import style from './style.module.css';
 
-function MenuProducts({ itens, increment }) {
+function MenuProducts({ itens, increment, orderData, decrement }) {
     return (
         <>
             {itens.map((element) =>
@@ -17,7 +17,7 @@ function MenuProducts({ itens, increment }) {
                 <h1 className={style.nameProduct}>
                     {element.name}
                 </h1>
-                {element.flavor === 'carne' ? <GiMeat color='brown' size='30px'/> :
+                {element.flavor === 'carne' ? <GiMeat color='brown' size='30px' /> :
                     element.flavor === 'frango' ? <GiChickenLeg color='orange' size='30px' /> :
                         element.flavor === 'vegetariano' ? <RiPlantFill color='green' size='30px' /> : ''}
                 <img
@@ -33,9 +33,10 @@ function MenuProducts({ itens, increment }) {
                     R${element.price}
                 </p>
                 <div className={style.counter}>
-                    <Counter 
-                    increment={() => increment(element)} 
-                    counter={element.qtd}/>
+                    <Counter
+                        decrement={() => decrement(element)}
+                        increment={() => increment(element)}
+                        counter={orderData[element.id] || 0} />
                 </div>
             </li>))}
         </>
